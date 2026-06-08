@@ -380,6 +380,13 @@ document.getElementById('navCameraBtn').addEventListener('click', () => {
   els.albumScroll.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+const effectsEntryBtn = document.getElementById('effectsEntryBtn');
+effectsEntryBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
+effectsEntryBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  openCapture();
+});
+
 applyNavVisuals(0, false);
 setupScrollDebug();
 setupAlbumScroll();
